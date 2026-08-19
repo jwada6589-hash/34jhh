@@ -1,0 +1,16 @@
+{
+  "name": "store-project",
+  "private": true,
+  "workspaces": [
+    "user-app",
+    "admin-web"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=user-app -- --port 3000\" \"npm run dev --workspace=admin-web\"",
+    "build": "npm run build --workspace=user-app && npm run build --workspace=admin-web && cp -r admin-web/dist user-app/dist/admin",
+    "preview": "npm run preview --workspace=user-app"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

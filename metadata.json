@@ -1,0 +1,8 @@
+{
+  "name": "Store App",
+  "description": "Store application with React and Vite",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
